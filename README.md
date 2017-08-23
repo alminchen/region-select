@@ -7,7 +7,7 @@
 3. 可用于Form表单包含使用，详见
 [Ant-design自定义表单控件](https://ant.design/components/form-cn/#components-form-demo-customized-form-controls)
 
-## datasource
+## Datasource
 参考如下格式
 ```javascript
 const regionDict = {
@@ -45,7 +45,7 @@ const regionDict = {
 };
 ```
 
-## value
+## Value
 1. 组件props和onChange中的value均为选中城市的code所构成的数组
 2. 选中“所有区域”时，value为[0]
 3. 初始value中值为int或者string要与datasource保持一致
