@@ -1,0 +1,87 @@
+# region-select
+基于ant-design的区域选择组件
+
+## Features
+1. 提供onChange方法，参数为已选择的城市code组成的数组
+2. 可接受dataSource（所有区域数据）和value（初始选中城市）两个props
+3. 可用于Form表单包含使用，详见
+[Ant-design自定义表单控件](https://ant.design/components/form-cn/#components-form-demo-customized-form-controls)
+
+## datasource
+参考如下格式
+```javascript
+const regionDict = {
+    "label": "所有地区",
+    "value": "0",
+    "regions": [{
+        "label": "华北地区",
+        "value": "1",
+        "provinces": [{
+            "label": "北京",
+            "value": "100",
+            "cities": []
+        }, {
+            "label": "天津",
+            "value": "300",
+            "cities": []
+        }, {
+            "label": "河北",
+            "value": "1200",
+            "cities": [{
+                "label": "石家庄市",
+                "value": "1201"
+            }, {
+                "label": "唐山市",
+                "value": "1202"
+            }, {
+                "label": "秦皇岛市",
+                "value": "1203"
+            }, {
+                "label": "邯郸市",
+                "value": "1204"
+            }]
+        }]
+    }]
+};
+```
+
+##value
+组件props和onChange中的value均为选中城市的code所构成的数组
+
+## Exapmle
+```
+import 'antd/dist/antd.css';
+import RegionSelect from './commonpents/region-select';
+import ReactDom from 'react-dom';
+
+class App extends React.Component {
+	constructor(props) {
+        super(props);
+        this.state = {
+            checkedCities: ['1201']
+        };
+    }
+	handleChange = (value) => {
+		this.setState({
+			checkedCities: value
+		});
+	};
+	render() {
+		const {checkedCities} = this.state;
+		return (
+			<div>
+				<RegionSelect value={checkedCities} onChange={this.handleChange}/>
+				<label style={{color:"red"}}>checkedCities:  </label>{checkedCities.join()}
+			</div>
+		);
+	}
+}
+
+ReactDom.render(
+	<App/>,
+    document.getElementById('app')
+);
+
+```
+
+[实例效果](https://zhaiyb.github.io/blob/react-personal/index.html)
