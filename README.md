@@ -45,8 +45,10 @@ const regionDict = {
 };
 ```
 
-##value
-组件props和onChange中的value均为选中城市的code所构成的数组
+## value
+1. 组件props和onChange中的value均为选中城市的code所构成的数组
+2. 选中“所有区域”时，value为[0]
+3. 初始value中值为int或者string要与datasource保持一致
 
 ## Exapmle
 ```
