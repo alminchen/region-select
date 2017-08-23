@@ -6,6 +6,7 @@
 2. 可接受dataSource（所有区域数据）和value（初始选中城市）两个props
 3. 可用于Form表单包含使用，详见
 [Ant-design自定义表单控件](https://ant.design/components/form-cn/#components-form-demo-customized-form-controls)
+4. 依赖lodash
 
 ## Datasource
 参考如下格式
