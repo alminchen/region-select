@@ -1,5 +1,43 @@
 # region-select
 基于ant-design的区域选择组件
+## Demo
+
+[https://zhaiyb.github.io/blob/react-personal/index.html](https://zhaiyb.github.io/blob/react-personal/index.html)
+
+```
+import 'antd/dist/antd.css';
+import RegionSelect from './commonpents/region-select';
+import ReactDom from 'react-dom';
+
+class App extends React.Component {
+	constructor(props) {
+        super(props);
+        this.state = {
+            checkedCities: ['1201']
+        };
+    }
+	handleChange = (value) => {
+		this.setState({
+			checkedCities: value
+		});
+	};
+	render() {
+		const {checkedCities} = this.state;
+		return (
+			<div>
+				<RegionSelect value={checkedCities} onChange={this.handleChange}/>
+				<label style={{color:"red"}}>checkedCities:  </label>{checkedCities.join()}
+			</div>
+		);
+	}
+}
+
+ReactDom.render(
+	<App/>,
+    document.getElementById('app')
+);
+
+```
 
 ## Features
 1. 提供onChange方法，参数为已选择的城市code组成的数组
@@ -50,41 +88,3 @@ const regionDict = {
 1. 组件props和onChange中的value均为选中城市的code所构成的数组
 2. 选中“所有区域”时，value为[0]
 3. 初始value中值为int或者string要与datasource保持一致
-
-## Exapmle
-```
-import 'antd/dist/antd.css';
-import RegionSelect from './commonpents/region-select';
-import ReactDom from 'react-dom';
-
-class App extends React.Component {
-	constructor(props) {
-        super(props);
-        this.state = {
-            checkedCities: ['1201']
-        };
-    }
-	handleChange = (value) => {
-		this.setState({
-			checkedCities: value
-		});
-	};
-	render() {
-		const {checkedCities} = this.state;
-		return (
-			<div>
-				<RegionSelect value={checkedCities} onChange={this.handleChange}/>
-				<label style={{color:"red"}}>checkedCities:  </label>{checkedCities.join()}
-			</div>
-		);
-	}
-}
-
-ReactDom.render(
-	<App/>,
-    document.getElementById('app')
-);
-
-```
-
-[实例效果](https://zhaiyb.github.io/blob/react-personal/index.html)
