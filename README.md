@@ -2,7 +2,7 @@
 基于ant-design的区域选择组件
 ## Demo
 
-[https://zhaiyb.github.io/blob/react-personal/index.html](https://zhaiyb.github.io/blob/react-personal/index.html)
+[https://zhaiyb.github.io/region-select/](https://zhaiyb.github.io/region-select/)
 
 ```
 import 'antd/dist/antd.css';
