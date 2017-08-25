@@ -6,7 +6,7 @@
 
 ```
 import 'antd/dist/antd.css';
-import RegionSelect from './commonpents/region-select';
+import RegionSelect from '@bizfe/region-select';
 import ReactDom from 'react-dom';
 
 class App extends React.Component {
