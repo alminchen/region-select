@@ -1,0 +1,22 @@
+{
+  "name": "@bizfe/region-select",
+  "version": "0.1.4",
+  "description": "",
+  "main": "dist/region-select.js",
+  "author": "zhaiyibo",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^2.12.4",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2"
+  },
+  "scripts": {
+    "build": "gulp build"
+  }
+}

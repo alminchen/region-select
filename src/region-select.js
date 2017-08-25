@@ -97,7 +97,7 @@ class RegionSelect extends React.Component {
         const allIndeterminate = !!intersectionOfAllLength && intersectionOfAllLength < allCityValueListLength;
         const allChecked = intersectionOfAllLength === allCityValueListLength;
         return (
-            <div className="dib">
+            <div>
                 <Checkbox cities={dataSource.allCities}
                           onChange={this.changeCheckbox}
                           indeterminate={allIndeterminate}
@@ -112,7 +112,7 @@ class RegionSelect extends React.Component {
                                 const cityValueListLength = cityValueList.length;
                                 const regionIndeterminate = !!intersectionOfRegionLength && intersectionOfRegionLength < cityValueListLength;
                                 const regionChecked = intersectionOfRegionLength === cityValueListLength;
-                                return (<div key={`${label}-region`} className="mt10" style={{display:"flex"}}>
+                                return (<div key={`${label}-region`} style={{display:"flex"}}>
                                     <Checkbox cities={cityValueList}
                                               onChange={this.changeCheckbox}
                                               indeterminate={regionIndeterminate}
@@ -139,8 +139,7 @@ class RegionSelect extends React.Component {
                                                                       checked={provinceChecked}
                                                                       onChange={this.changeCheckbox}
                                                                       indeterminate={provinceIndeterminate}
-                                                                      className="ml10"
-                                                                      style={{height:"32px",inlineHeight:"32px"}}>
+                                                                      style={{marginBottom:"10px"}}>
                                                                 {label}
                                                                 ({intersectionOfProvinceLength}/{cityValueListLength})
                                                             </Checkbox>
@@ -154,8 +153,7 @@ class RegionSelect extends React.Component {
                                                                   checked={provinceChecked}
                                                                   onChange={this.changeCheckbox}
                                                                   indeterminate={provinceIndeterminate}
-                                                                  className="ml10"
-                                                                  style={{height:"32px",inlineHeight:"32px"}}>
+                                                                  style={{marginBottom:"10px"}}>
                                                             {label}
                                                         </Checkbox>
                                                     );
