@@ -1,6 +1,6 @@
 {
   "name": "@bizfe/region-select",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
   "main": "dist/region-select.js",
   "author": "zhaiyibo",
