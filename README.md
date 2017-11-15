@@ -1,3 +1,5 @@
+#该组件只用于满足很具体的需求，若需要受控组件，推荐使用[four-layer-select](https://github.com/zhaiyb/four-layer-select)
+
 # region-select
 基于ant-design的区域选择组件
 ## Demo
